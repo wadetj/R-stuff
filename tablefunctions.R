@@ -93,6 +93,7 @@ glmORs=function(x, dps=3){
   orslo=exp(x$coefficients-(1.96*ses))
   orsup=exp(x$coefficients+(1.96*ses))
   dat=cbind(round(ors, dps), round(orslo, dps),  round(orsup, dps), round(pvals, dps))
+  dat=dat[-1,] 
   colnames(dat)=c("ORs", "95LB", "95UB", "p")
     dat
 }
