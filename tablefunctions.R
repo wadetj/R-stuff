@@ -130,7 +130,7 @@ glmORs<-function(x, dps=3){
 	
   dat<-cbind.data.frame(round(b, dps), round(blo, dps),  round(bup, dps), round(pvals, dps))
   dat<-dat[-1,] 
-  dat=<-bind.data.frame(dat, N)
+  dat<-bind.data.frame(dat, N)
   dat$N[1:nrow(dat)-1]=""
  colnames(dat)<-c("Beta", "95LB", "95UB", "p", "N")
     dat
